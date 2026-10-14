@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hunter's Archive — katalog informasi monster Monster Hunter.">
+  <title>Hunter's Archive | Field Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="logo">HA</span><span><b>HUNTER'S ARCHIVE</b><small>FIELD GUIDE / RESEARCH DIVISION</small></span></a>
+  <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">☰</button>
+  <nav id="nav">
+    <a href="#home">Beranda</a><a href="#monsters">Monster</a>
+    <button id="openJournal">▤ Hunter's Journal <b id="count">0</b></button>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <p class="eyebrow">FIELD NOTES / NEW WORLD</p>
+    <h1>KNOW YOUR PREY.<br><em>MASTER THE HUNT.</em></h1>
+    <p>Arsip monster untuk para hunter. Pelajari habitat, klasifikasi, elemen, dan karakteristik setiap makhluk sebelum memulai perburuan.</p>
+    <a class="primary" href="#monsters">Jelajahi Arsip ↘</a>
+    <button class="secondary" id="randomHero">⚄ Random Hunt</button>
+  </div>
+  <div class="stamp">WILDLIFE<br><b>ARCHIVE</b><small>FIELD LOG / 001</small></div>
+  <div class="hero-foot"><span>MONSTER HUNTER FIELD GUIDE</span><span>RESEARCH DIVISION · 2026</span></div>
+</section>
+
+<section class="catalog" id="monsters">
+  <div class="heading">
+    <div><p class="eyebrow">THE MONSTER INDEX</p><h2>MONSTER ARCHIVE<span>.</span></h2><p class="muted">Catatan lapangan dari berbagai habitat.</p></div>
+    <div class="total"><b id="total">12</b><small>ENTRIES IN<br>ARCHIVE</small></div>
+  </div>
+  <div class="tools">
+    <label class="search">⌕ <input id="search" placeholder="Cari nama monster..." type="search" aria-label="Cari monster"></label>
+    <select id="filter" aria-label="Filter klasifikasi">
+      <option value="all">Semua klasifikasi</option><option>Flying Wyvern</option><option>Piscine Wyvern</option><option>Fanged Wyvern</option><option>Elder Dragon</option><option>Bird Wyvern</option><option>Brute Wyvern</option>
+    </select>
+    <button class="secondary" id="shuffle">⤨ Acak Urutan</button>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p id="empty" class="muted empty" hidden>Tidak ada monster ditemukan.</p>
+</section>
+
+<section class="journal" id="journal" hidden>
+  <div class="journal-head"><div><p class="eyebrow">PERSONAL FIELD NOTES</p><h2>HUNTER'S JOURNAL<span>.</span></h2><p class="muted">Monster yang kamu tandai untuk dipelajari nanti.</p></div><button id="closeJournal" class="secondary">Tutup ✕</button></div>
+  <div id="savedList" class="saved-list"></div>
+  <p id="journalEmpty" class="muted">Jurnalmu masih kosong. Tambahkan monster dari kartu katalog.</p>
+</section>
+
+<section class="tip"><span class="tip-icon">✦</span><div><p class="eyebrow">HUNTER'S TIP</p><h2>PREPARATION IS PART OF THE HUNT.</h2><p>Kenali habitat dan karakteristik monster sebelum memilih perlengkapan.</p></div><button id="randomTip">Pilih monster acak ↗</button></section>
+</main>
+<footer><a class="brand" href="#home"><span class="logo">HA</span><span><b>HUNTER'S ARCHIVE</b><small>FIELD GUIDE / RESEARCH DIVISION</small></span></a><p>Fan-made educational demo · Not affiliated with CAPCOM.</p><small>FIELD LOG / 2026</small></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
